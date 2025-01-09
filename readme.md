@@ -29,14 +29,14 @@ This framework leverages:
 import { SessionManager } from './src/services/session.js';
 
 const manager = new SessionManager();
-const { actions } = await manager.createSession('my-session', {
+const { session, actions } = await manager.createSession('my-session', {  
     headless: false,
     proxy: "default",
     fingerprint: "default"
 });
 
 // Navigate with smart timeout handling
-await actions.navigate('https://example.com');
+await actions.navigate('https://example.com'); // or session.driver.get('https://example.com');
 
 // Resilient element interactions
 await actions.click('//button[@id="submit"]');
