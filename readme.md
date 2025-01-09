@@ -13,8 +13,7 @@ A robust Selenium automation framework with enhanced browser control, anti-detec
 ## 🛠️ Technology Highlights
 
 This framework leverages:
-- **CheshireCat**: For anti-detection browser session management
-- **selenium-with-fingerprints**: A powerful library that enhances Selenium with browser fingerprinting and proxy support
+- **CheshireCat/selenium-with-fingerprints**: A powerful library that enhances Selenium with browser fingerprinting and proxy support
 
 
 ## 🚀 Getting Started
