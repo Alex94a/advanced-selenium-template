@@ -1,0 +1,22 @@
+{
+  "name": "advanced-selenium-scripts",
+  "version": "1.0.0",
+  "main": "Session.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "p-queue": "^8.0.1",
+    "selenium-webdriver": "^4.27.0",
+    "selenium-with-fingerprints": "^2.0.5",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.17.0"
+  }
+}
