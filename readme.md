@@ -10,6 +10,13 @@ A robust Selenium automation framework with enhanced browser control, anti-detec
 - **Profile Management**: Built-in browser profile handling for persistent sessions
 - **Comprehensive Logging**: Detailed session logging for better debugging and monitoring
 
+## 🛠️ Technology Highlights
+
+This framework leverages:
+- **CheshireCat**: For anti-detection browser session management
+- **selenium-with-fingerprints**: A powerful library that enhances Selenium with browser fingerprinting and proxy support
+
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -127,4 +134,4 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## 📝 License
 
-This project is licensed under the ISC License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
