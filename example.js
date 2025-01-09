@@ -1,21 +1,12 @@
 import { SessionManager } from './src/services/session.js'
 import { Logger } from './src/utils/logger.js';
 
-// Simple selectors
-const SELECTORS = {
-    github: {
-        navigation: {
-            searchInput: '//input[@name="q"]',
-            issuesTab: '//span[@data-content="Issues"]',
-        }
-    }
-};
 
 /**
  * Simple GitHub repository visit example
  */
-export async function simpleGitHubVisit() {
-    const logger = new Logger('GitHubVisit');
+export async function example() {
+    const logger = new Logger('example');
     let manager;
     let sessionId;
 
@@ -26,34 +17,24 @@ export async function simpleGitHubVisit() {
         logger.info('Session manager initialized');
 
         // Create a new session
-        sessionId = 'github-visit-session';
+        sessionId = 'example-session';
         const { actions } = await manager.createSession(sessionId, {
             headless: false,
-            proxy: "default",
-            fingerprint: "default"
+            proxy: "database",
+            fingerprint: "database"
         });
         logger.info('Browser session created successfully');
 
         try {
-            // Navigate to a specific GitHub repository
-            logger.info('Navigating to TypeScript repository...');
-            await actions.navigate('https://github.com/microsoft/typescript');
-            
-            // Click on Issues tab
-            logger.info('Clicking Issues tab...');
-            await actions.click(SELECTORS.github.navigation.issuesTab);
-            
-            // Take a screenshot
-            logger.info('Capturing screenshot of issues page...');
-            await actions.screenshot('typescript-issues.png');
-            logger.info('Screenshot saved successfully');
-            
-            // Wait a moment to see the result
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            logger.info('Visit completed successfully');
+            await actions.navigate('https://abrahamjuliot.github.io/creepjs/');
 
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            
+            await actions.screenshot('creepjs.png');
+
+            logger.info('Example completed successfully');
         } catch (error) {
-            logger.error(`Error during GitHub visit: ${error.message}`);
+            logger.error(`Error during example: ${error.message}`);
             throw error;
         } finally {
             if (sessionId) {

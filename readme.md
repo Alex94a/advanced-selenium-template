@@ -8,7 +8,6 @@ A robust Selenium automation framework with enhanced browser control, anti-detec
 - **Anti-Detection Measures**: Built-in support for browser fingerprinting and proxy integration
 - **Resilient Element Interactions**: Fallback JavaScript-based methods for clicking and inputting when standard Selenium approaches fail
 - **Profile Management**: Built-in browser profile handling for persistent sessions
-- **Comprehensive Logging**: Detailed session logging for better debugging and monitoring
 
 ## 🛠️ Technology Highlights
 
@@ -70,38 +69,19 @@ Provides enhanced interaction methods:
 
 ## 🔧 Configuration
 
-### Proxy Setup
+## Proxy
 
-Supports various proxy configurations:
+- `"ip:port"` — anonymous proxy
+- `"username:password@ip:port"` — authenticated proxy
+- `"default"` — system settings
+- `"database"` — rotation from database
 
-```javascript
-// Anonymous proxy
-proxy: "ip:port"
+## Fingerprint
 
-// Authenticated proxy
-proxy: "username:password@ip:port"
-
-// Default system settings
-proxy: "default"
-```
-
-### Browser Fingerprinting
-
-Multiple fingerprinting modes available:
-
-- `"default"`: Uses default browser fingerprint
-- `"fetch"`: Fetches new fingerprint from service
-- `"database"`: Uses stored fingerprint from database
-- Custom JSON fingerprint configuration
-
-## 📋 Error Handling
-
-The framework implements comprehensive error handling:
-
-- Automatic retries for failed interactions
-- Smart timeouts for page loading
-- Detailed error logging with stack traces
-- Graceful session cleanup on failures
+- `"default"` — default fingerprint
+- `"fetch"` — new fingerprint from service
+- `"database"` — stored fingerprint
+- `fingerprint value` — custom fingerprint
 
 ## 💡 Best Practices
 
